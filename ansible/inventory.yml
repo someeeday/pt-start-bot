@@ -20,7 +20,7 @@ all:
     DB_USER: postgres
     DB_PASSWORD: 1618
     DB_DATABASE: telegram_db
-    TOKEN: 7189631590:AAHrL6C8heVt3Nn94mZvOimynlH4T9jxWHY
+    TOKEN:
     RM_HOST: 192.168.26.168
     RM_PORT: 22
     RM_USER: ubuntu
