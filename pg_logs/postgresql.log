@@ -1,0 +1,206 @@
+2024-10-14 07:18:49.365 GMT [53] LOG:  starting PostgreSQL 17.0 (Debian 17.0-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2024-10-14 07:18:49.367 GMT [53] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-10-14 07:18:49.369 GMT [57] LOG:  database system was shut down at 2024-10-14 07:18:49 GMT
+2024-10-14 07:18:49.373 GMT [53] LOG:  database system is ready to accept connections
+2024-10-14 07:18:49.556 GMT [53] LOG:  received fast shutdown request
+2024-10-14 07:18:49.557 GMT [53] LOG:  aborting any active transactions
+2024-10-14 07:18:49.558 GMT [53] LOG:  background worker "logical replication launcher" (PID 61) exited with exit code 1
+2024-10-14 07:18:49.558 GMT [55] LOG:  shutting down
+2024-10-14 07:18:49.564 GMT [55] LOG:  checkpoint starting: shutdown immediate
+2024-10-14 07:18:49.617 GMT [55] LOG:  checkpoint complete: wrote 940 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.022 s, sync=0.002 s, total=0.053 s; sync files=311, longest=0.001 s, average=0.001 s; distance=11372 kB, estimate=11372 kB; lsn=0/2000028, redo lsn=0/2000028
+2024-10-14 07:18:49.642 GMT [53] LOG:  database system is shut down
+2024-10-14 07:18:49.672 GMT [1] LOG:  starting PostgreSQL 17.0 (Debian 17.0-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2024-10-14 07:18:49.673 GMT [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-10-14 07:18:49.673 GMT [1] LOG:  listening on IPv6 address "::", port 5432
+2024-10-14 07:18:49.673 GMT [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-10-14 07:18:49.676 GMT [76] LOG:  database system was shut down at 2024-10-14 07:18:49 GMT
+2024-10-14 07:18:49.680 GMT [1] LOG:  database system is ready to accept connections
+2024-10-14 07:18:50.001 GMT [81] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:18:51.780 GMT [82] LOG:  received replication command: SHOW data_directory_mode
+2024-10-14 07:18:51.780 GMT [82] STATEMENT:  SHOW data_directory_mode
+2024-10-14 07:18:51.780 GMT [82] LOG:  received replication command: SHOW wal_segment_size
+2024-10-14 07:18:51.780 GMT [82] STATEMENT:  SHOW wal_segment_size
+2024-10-14 07:18:51.781 GMT [82] LOG:  received replication command: IDENTIFY_SYSTEM
+2024-10-14 07:18:51.781 GMT [82] STATEMENT:  IDENTIFY_SYSTEM
+2024-10-14 07:18:51.781 GMT [82] LOG:  received replication command: BASE_BACKUP ( LABEL 'pg_basebackup base backup',  PROGRESS,  WAIT 0,  MANIFEST 'yes',  TARGET 'client')
+2024-10-14 07:18:51.781 GMT [82] STATEMENT:  BASE_BACKUP ( LABEL 'pg_basebackup base backup',  PROGRESS,  WAIT 0,  MANIFEST 'yes',  TARGET 'client')
+2024-10-14 07:18:51.796 GMT [74] LOG:  checkpoint starting: force wait
+2024-10-14 07:18:51.919 GMT [74] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 2 recycled; write=0.102 s, sync=0.002 s, total=0.123 s; sync files=3, longest=0.001 s, average=0.001 s; distance=16384 kB, estimate=16384 kB; lsn=0/3000080, redo lsn=0/3000028
+2024-10-14 07:18:51.930 GMT [86] LOG:  received replication command: SHOW data_directory_mode
+2024-10-14 07:18:51.930 GMT [86] STATEMENT:  SHOW data_directory_mode
+2024-10-14 07:18:51.930 GMT [86] LOG:  received replication command: CREATE_REPLICATION_SLOT "pg_basebackup_86" TEMPORARY PHYSICAL ( RESERVE_WAL)
+2024-10-14 07:18:51.930 GMT [86] STATEMENT:  CREATE_REPLICATION_SLOT "pg_basebackup_86" TEMPORARY PHYSICAL ( RESERVE_WAL)
+2024-10-14 07:18:51.931 GMT [86] LOG:  released physical replication slot "pg_basebackup_86"
+2024-10-14 07:18:51.931 GMT [86] STATEMENT:  CREATE_REPLICATION_SLOT "pg_basebackup_86" TEMPORARY PHYSICAL ( RESERVE_WAL)
+2024-10-14 07:18:51.931 GMT [86] LOG:  received replication command: IDENTIFY_SYSTEM
+2024-10-14 07:18:51.931 GMT [86] STATEMENT:  IDENTIFY_SYSTEM
+2024-10-14 07:18:51.931 GMT [86] LOG:  received replication command: START_REPLICATION SLOT "pg_basebackup_86" 0/3000000 TIMELINE 1
+2024-10-14 07:18:51.931 GMT [86] STATEMENT:  START_REPLICATION SLOT "pg_basebackup_86" 0/3000000 TIMELINE 1
+2024-10-14 07:18:51.931 GMT [86] LOG:  acquired physical replication slot "pg_basebackup_86"
+2024-10-14 07:18:51.931 GMT [86] STATEMENT:  START_REPLICATION SLOT "pg_basebackup_86" 0/3000000 TIMELINE 1
+2024-10-14 07:18:52.058 GMT [86] LOG:  released physical replication slot "pg_basebackup_86"
+2024-10-14 07:18:52.058 GMT [86] STATEMENT:  START_REPLICATION SLOT "pg_basebackup_86" 0/3000000 TIMELINE 1
+2024-10-14 07:18:52.177 GMT [91] LOG:  received replication command: IDENTIFY_SYSTEM
+2024-10-14 07:18:52.177 GMT [91] STATEMENT:  IDENTIFY_SYSTEM
+2024-10-14 07:18:52.177 GMT [91] LOG:  received replication command: START_REPLICATION 0/4000000 TIMELINE 1
+2024-10-14 07:18:52.177 GMT [91] STATEMENT:  START_REPLICATION 0/4000000 TIMELINE 1
+2024-10-14 07:18:55.006 GMT [92] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:19:00.011 GMT [93] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:19:05.015 GMT [94] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:19:10.021 GMT [96] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:19:15.022 GMT [97] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:19:20.029 GMT [98] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:19:25.034 GMT [99] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:19:30.040 GMT [101] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:19:35.044 GMT [102] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:19:40.051 GMT [103] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:19:45.053 GMT [104] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:19:50.058 GMT [106] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:19:55.064 GMT [107] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:20:00.072 GMT [108] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:20:05.074 GMT [109] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:20:10.078 GMT [111] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:20:13.535 GMT [112] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:20:15.084 GMT [113] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:20:18.539 GMT [114] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:20:20.087 GMT [115] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:20:23.544 GMT [116] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:20:25.092 GMT [117] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:20:28.551 GMT [118] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:20:30.094 GMT [120] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:20:33.555 GMT [121] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:20:35.099 GMT [122] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:20:38.558 GMT [123] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:20:40.104 GMT [124] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:20:43.563 GMT [125] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:20:45.108 GMT [126] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:20:48.569 GMT [127] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:20:50.113 GMT [129] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:20:53.575 GMT [130] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:20:55.119 GMT [131] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:20:58.577 GMT [132] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:21:00.122 GMT [133] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:21:01.918 GMT [1] LOG:  received fast shutdown request
+2024-10-14 07:21:01.919 GMT [1] LOG:  aborting any active transactions
+2024-10-14 07:21:01.919 GMT [85] FATAL:  terminating connection due to administrator command
+2024-10-14 07:21:01.920 GMT [1] LOG:  background worker "logical replication launcher" (PID 80) exited with exit code 1
+2024-10-14 07:21:01.921 GMT [74] LOG:  shutting down
+2024-10-14 07:21:01.946 GMT [74] LOG:  checkpoint starting: shutdown immediate
+2024-10-14 07:21:01.952 GMT [74] LOG:  checkpoint complete: wrote 45 buffers (0.3%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.003 s, sync=0.001 s, total=0.007 s; sync files=11, longest=0.001 s, average=0.001 s; distance=32768 kB, estimate=32768 kB; lsn=0/5000028, redo lsn=0/5000028
+2024-10-14 07:21:01.964 GMT [1] LOG:  database system is shut down
+2024-10-14 07:21:02.745 GMT [1] LOG:  starting PostgreSQL 17.0 (Debian 17.0-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2024-10-14 07:21:02.745 GMT [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-10-14 07:21:02.745 GMT [1] LOG:  listening on IPv6 address "::", port 5432
+2024-10-14 07:21:02.747 GMT [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-10-14 07:21:02.750 GMT [35] LOG:  database system was shut down at 2024-10-14 07:21:01 GMT
+2024-10-14 07:21:02.754 GMT [1] LOG:  database system is ready to accept connections
+2024-10-14 07:21:03.585 GMT [41] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:21:03.646 GMT [42] LOG:  received replication command: SHOW data_directory_mode
+2024-10-14 07:21:03.646 GMT [42] STATEMENT:  SHOW data_directory_mode
+2024-10-14 07:21:03.646 GMT [42] LOG:  received replication command: SHOW wal_segment_size
+2024-10-14 07:21:03.646 GMT [42] STATEMENT:  SHOW wal_segment_size
+2024-10-14 07:21:03.646 GMT [42] LOG:  received replication command: IDENTIFY_SYSTEM
+2024-10-14 07:21:03.646 GMT [42] STATEMENT:  IDENTIFY_SYSTEM
+2024-10-14 07:21:03.646 GMT [42] LOG:  received replication command: BASE_BACKUP ( LABEL 'pg_basebackup base backup',  PROGRESS,  WAIT 0,  MANIFEST 'yes',  TARGET 'client')
+2024-10-14 07:21:03.646 GMT [42] STATEMENT:  BASE_BACKUP ( LABEL 'pg_basebackup base backup',  PROGRESS,  WAIT 0,  MANIFEST 'yes',  TARGET 'client')
+2024-10-14 07:21:03.657 GMT [33] LOG:  checkpoint starting: force wait
+2024-10-14 07:21:03.660 GMT [33] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.001 s, sync=0.001 s, total=0.004 s; sync files=2, longest=0.001 s, average=0.001 s; distance=16384 kB, estimate=16384 kB; lsn=0/6000080, redo lsn=0/6000028
+2024-10-14 07:21:03.668 GMT [45] LOG:  received replication command: SHOW data_directory_mode
+2024-10-14 07:21:03.668 GMT [45] STATEMENT:  SHOW data_directory_mode
+2024-10-14 07:21:03.668 GMT [45] LOG:  received replication command: CREATE_REPLICATION_SLOT "pg_basebackup_45" TEMPORARY PHYSICAL ( RESERVE_WAL)
+2024-10-14 07:21:03.668 GMT [45] STATEMENT:  CREATE_REPLICATION_SLOT "pg_basebackup_45" TEMPORARY PHYSICAL ( RESERVE_WAL)
+2024-10-14 07:21:03.670 GMT [45] LOG:  released physical replication slot "pg_basebackup_45"
+2024-10-14 07:21:03.670 GMT [45] STATEMENT:  CREATE_REPLICATION_SLOT "pg_basebackup_45" TEMPORARY PHYSICAL ( RESERVE_WAL)
+2024-10-14 07:21:03.670 GMT [45] LOG:  received replication command: IDENTIFY_SYSTEM
+2024-10-14 07:21:03.670 GMT [45] STATEMENT:  IDENTIFY_SYSTEM
+2024-10-14 07:21:03.670 GMT [45] LOG:  received replication command: START_REPLICATION SLOT "pg_basebackup_45" 0/6000000 TIMELINE 1
+2024-10-14 07:21:03.670 GMT [45] STATEMENT:  START_REPLICATION SLOT "pg_basebackup_45" 0/6000000 TIMELINE 1
+2024-10-14 07:21:03.670 GMT [45] LOG:  acquired physical replication slot "pg_basebackup_45"
+2024-10-14 07:21:03.670 GMT [45] STATEMENT:  START_REPLICATION SLOT "pg_basebackup_45" 0/6000000 TIMELINE 1
+2024-10-14 07:21:03.730 GMT [45] LOG:  released physical replication slot "pg_basebackup_45"
+2024-10-14 07:21:03.730 GMT [45] STATEMENT:  START_REPLICATION SLOT "pg_basebackup_45" 0/6000000 TIMELINE 1
+2024-10-14 07:21:03.903 GMT [50] LOG:  received replication command: IDENTIFY_SYSTEM
+2024-10-14 07:21:03.903 GMT [50] STATEMENT:  IDENTIFY_SYSTEM
+2024-10-14 07:21:03.903 GMT [50] LOG:  received replication command: START_REPLICATION 0/7000000 TIMELINE 1
+2024-10-14 07:21:03.903 GMT [50] STATEMENT:  START_REPLICATION 0/7000000 TIMELINE 1
+2024-10-14 07:21:05.127 GMT [51] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:21:08.586 GMT [52] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:21:10.132 GMT [53] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:21:13.594 GMT [54] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:21:15.138 GMT [55] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:21:18.602 GMT [56] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:21:20.142 GMT [57] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:21:23.604 GMT [59] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:21:25.146 GMT [60] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:21:28.609 GMT [61] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:21:30.151 GMT [62] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:21:33.612 GMT [63] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:21:35.155 GMT [64] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:21:38.618 GMT [65] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:21:40.161 GMT [66] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:21:43.623 GMT [68] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:21:45.168 GMT [69] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:21:48.629 GMT [70] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:21:50.171 GMT [71] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:21:53.633 GMT [72] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:21:55.178 GMT [73] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:21:58.635 GMT [74] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:22:00.183 GMT [75] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:22:03.640 GMT [77] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:22:05.188 GMT [78] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:22:08.644 GMT [79] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:22:10.191 GMT [80] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:22:13.649 GMT [81] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:22:15.197 GMT [82] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:22:18.661 GMT [83] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:22:20.201 GMT [84] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:22:23.656 GMT [86] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:22:25.206 GMT [87] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:22:28.661 GMT [89] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:22:30.211 GMT [90] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:22:33.665 GMT [91] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:22:35.216 GMT [92] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:22:38.670 GMT [93] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:22:40.222 GMT [94] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:22:43.674 GMT [96] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:22:45.226 GMT [97] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:22:48.680 GMT [98] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:22:50.231 GMT [99] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:22:53.685 GMT [100] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:22:55.238 GMT [101] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:22:58.687 GMT [102] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:23:00.241 GMT [103] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:23:03.694 GMT [105] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:23:05.246 GMT [106] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:23:08.697 GMT [107] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:23:10.253 GMT [108] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:23:13.701 GMT [109] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:23:15.257 GMT [110] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:23:18.706 GMT [111] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:23:20.262 GMT [112] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:23:23.712 GMT [114] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:23:25.269 GMT [115] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:23:28.718 GMT [116] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:23:30.271 GMT [117] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:23:33.722 GMT [118] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:23:35.275 GMT [119] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:23:38.728 GMT [120] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:23:40.280 GMT [121] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:23:43.733 GMT [123] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:23:45.284 GMT [124] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:23:48.738 GMT [125] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:23:50.291 GMT [126] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:23:53.744 GMT [127] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:23:55.292 GMT [128] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:23:58.742 GMT [129] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:24:00.297 GMT [130] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:24:03.748 GMT [132] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.156", user "repl_user", no encryption
+2024-10-14 07:24:05.303 GMT [133] FATAL:  no pg_hba.conf entry for replication connection from host "192.168.26.165", user "repl_user", no encryption
+2024-10-14 07:24:07.947 GMT [1] LOG:  received fast shutdown request
+2024-10-14 07:24:07.948 GMT [1] LOG:  aborting any active transactions
+2024-10-14 07:24:07.948 GMT [88] FATAL:  terminating connection due to administrator command
+2024-10-14 07:24:07.949 GMT [1] LOG:  background worker "logical replication launcher" (PID 39) exited with exit code 1
+2024-10-14 07:24:07.949 GMT [33] LOG:  shutting down
+2024-10-14 07:24:07.967 GMT [33] LOG:  checkpoint starting: shutdown immediate
+2024-10-14 07:24:07.986 GMT [33] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 3 recycled; write=0.001 s, sync=0.001 s, total=0.020 s; sync files=1, longest=0.001 s, average=0.001 s; distance=32768 kB, estimate=32768 kB; lsn=0/8000028, redo lsn=0/8000028
+2024-10-14 07:24:07.990 GMT [1] LOG:  database system is shut down
