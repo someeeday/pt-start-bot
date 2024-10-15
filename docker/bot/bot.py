@@ -239,9 +239,29 @@ async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 #start of log
 async def get_repl_logs(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    stdin, stdout, stderr = ssh.exec_command('cat /var/log/postgresql/postgresql-14-main.log | tail -n 5')
-    output = stdout.read().decode('utf-8')
+    try:
+        # Команда для извлечения логов репликации без использования -i
+        command = "sudo docker exec -t db grep 'replication' /var/log/postgresql/postgresql.log | tail -n 5"
+        
+        # Выполнение команды
+        stdin, stdout, stderr = ssh.exec_command(command)
+
+        # Чтение вывода и ошибок
+        output = stdout.read().decode('utf-8').strip()
+        error_output = stderr.read().decode('utf-8').strip()
+
+        # Проверка на ошибки
+        if error_output:
+            output += f"\nОшибка при выполнении команды: {error_output}"
+        elif not output:
+            output = "Логи репликации пусты или не найдены."
+        
+    except Exception as e:
+        output = f"Произошла ошибка при выполнении команды: {str(e)}"
+
+    # Отправка сообщения в чат
     await context.bot.send_message(chat_id=update.effective_chat.id, text=output)
+
 #end
 
 #db_telegram_output
