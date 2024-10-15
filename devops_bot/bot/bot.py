@@ -247,12 +247,13 @@ async def get_repl_logs(update: Update, context: ContextTypes.DEFAULT_TYPE):
 #db_telegram_output
 async def get_emails(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
-        cur.execute("SELECT email FROM emails;")
-        emails = [row[0] for row in cur.fetchall()]
-        if emails:
-            await context.bot.send_message(chat_id=update.effective_chat.id, text="Найденные адреса:\n" + "\n".join(emails))
-        else:
-            await context.bot.send_message(chat_id=update.effective_chat.id, text="Адреса не найдены.")
+        with conn.cursor() as cur:
+            cur.execute("SELECT email FROM emails;")
+            emails = [row[0] for row in cur.fetchall()]
+            if emails:
+                await context.bot.send_message(chat_id=update.effective_chat.id, text="Найденные адреса:\n" + "\n".join(emails))
+            else:
+                await context.bot.send_message(chat_id=update.effective_chat.id, text="Адреса не найдены.")
     except psycopg2.Error as e:
         await context.bot.send_message(chat_id=update.effective_chat.id, text=f"Ошибка при получении данных из базы данных: {e}")
 
